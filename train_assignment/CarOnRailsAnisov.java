@@ -1,3 +1,5 @@
+/* My grade for this assignment is 100 as it was fairly simple, and I met all the requirements for this assignment */
+
 public class CarOnRailsAnisov {
 	// Chose a rather fitting name for this class
 	public static void main(String[] args) {
