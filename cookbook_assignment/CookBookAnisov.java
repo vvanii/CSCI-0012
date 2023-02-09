@@ -1,12 +1,13 @@
 /*
-Name: 
-Date:
-Program description
+Name: Vlad Anisov
+Date: 02/09/2023
+Program description:
+
 self-grade: Must explain the reasons for the given grade
 
-Must change th name of  all the given methods otherwise you will loose points
+Must change th name of  all the given methods otherwise you will lose points
 */
-public class DisplayLastName   //<------- chnage the name to a proper name and include your last name
+public class CookBookAnisov   //<------- chnage the name to a proper name and include your last name
 {
    public static void main(String[] args)
    {
