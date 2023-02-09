@@ -17,14 +17,14 @@ public class CookBookAnisov   // my general class for the entire cookbook
    
    public static void draw() // this class contains all the letters in their order
    {
-      DisplayCC();
-      DisplayOO();
-      DisplayOO();
-      DisplayKK();
-      DisplayBB();
-      DisplayOO();
-      DisplayOO();
-      DisplayKK();
+      LetterC();
+      LetterO();
+      LetterO();
+      LetterK();
+      LetterB();
+      LetterO();
+      LetterO();
+      LetterK();
    }
    
    // This section of the code is the letters in their own methods.
@@ -32,7 +32,7 @@ public class CookBookAnisov   // my general class for the entire cookbook
    /*
       Description: This method draws the letter C
    */
-   public static void DisplayCC()    
+   public static void LetterC()    
    {
       System.out.println("CCCCCCCCC         CCCCCCCCC\nCC                CC\nCC                CC\nCC                CC\nCCCCCCCCC         CCCCCCCCC");
    }
@@ -41,21 +41,21 @@ public class CookBookAnisov   // my general class for the entire cookbook
    Description: This method dispays the letter O
    */
    
-   public static void DisplayOO()   
+   public static void LetterO()   
    {
       System.out.println(" OOOOOOOOO         OOOOOOOOO \nO          O      O          O\nO          O      O          O\nO          O      O          O\n OOOOOOOOO         OOOOOOOOO  ");
    }
    /*
    Description: This method displays the letter K
    */
-   public static void DisplayKK()  
+   public static void LetterK()  
    {
       System.out.println("K    K             K    K\nK   K              K   K\nK  K               K  K\nK K                K K\nK  K               K  K\nK   K              K   K\nK    K             K    K");
    }
    /*
    Description: This method displays tthe letter B
    */
-   public static void DisplayBB()    
+   public static void LetterB()    
    {
       System.out.println("BBBBBBB            BBBBBBB\nB     B            B     B\nB     B            B     B\nB    B             B    B\nBBBB               BBBB\nB    B             B    B\nB     B            B     B\nB     B            B     B\nBBBBBBB            BBBBBBB");
    }
