@@ -15,47 +15,47 @@ public class CookBookAnisov   // my general class for the entire cookbook
       draw();
    }
    
-   public static void draw() // this class contains all the letters in their order
+   public static void draw() // this class contains all the letters in their order and displays them
    {
-      LetterC();
-      LetterO();
-      LetterO();
-      LetterK();
-      LetterB();
-      LetterO();
-      LetterO();
-      LetterK();
+      letterC();
+      letterO();
+      letterO();
+      letterK();
+      letterB();
+      letterO();
+      letterO();
+      letterK();
    }
    
-   // This section of the code is the letters in their own methods.
+   // This section of the code are letters in their own methods.
 
    /*
-      Description: This method draws the letter C
+      Description: This method displays the letter C
    */
-   public static void LetterC()    
+   public static void letterC()    
    {
       System.out.println("CCCCCCCCC         CCCCCCCCC\nCC                CC\nCC                CC\nCC                CC\nCCCCCCCCC         CCCCCCCCC");
    }
    
    /* 
-   Description: This method dispays the letter O
+   Description: This method displays the letter O
    */
    
-   public static void LetterO()   
+   public static void letterO()   
    {
       System.out.println(" OOOOOOOOO         OOOOOOOOO \nO          O      O          O\nO          O      O          O\nO          O      O          O\n OOOOOOOOO         OOOOOOOOO  ");
    }
    /*
    Description: This method displays the letter K
    */
-   public static void LetterK()  
+   public static void letterK()  
    {
       System.out.println("K    K             K    K\nK   K              K   K\nK  K               K  K\nK K                K K\nK  K               K  K\nK   K              K   K\nK    K             K    K");
    }
    /*
-   Description: This method displays tthe letter B
+   Description: This method displays the letter B
    */
-   public static void LetterB()    
+   public static void letterB()    
    {
       System.out.println("BBBBBBB            BBBBBBB\nB     B            B     B\nB     B            B     B\nB    B             B    B\nBBBB               BBBB\nB    B             B    B\nB     B            B     B\nB     B            B     B\nBBBBBBB            BBBBBBB");
    }
