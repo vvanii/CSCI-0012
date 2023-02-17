@@ -1,36 +1,19 @@
 /*
 Vlad Anisov
 date: 02/16/2023
-Description://TODO: fill out
-self-grade: //TODO: fill out
-*/
-
-/*_______________________________________________________________________________________________
-Sample output: your code must match this output
-2042 pennies is equal to: 
-20 dollars
-1 quarters
-1 dimes
-1 nickels
-2 pennies
-*****************************
-3255 ounces is equal to 203.0 and 7.0 ounces
- *****************************
-5 cups is equal to 1.2 liters
- *****************************
-10.0 kilograms is equal to 22.22222222222222 pounds
- *****************************
-120.0 kilometer per hour is equal to 75.0 miles per hour
-_________________________________________________________________________________________________________
+Description: This code simply includes some basic unit conversions like speed, measurements, currency, and so forth.
+self-grade: 100% because I did the best to comment throughout the code and I did my best to make good indentation to make the code more readable.
 */
 
 public class ConversionAnisov {
-   public static void main(String[] args) {
+   public static void main(String[] args) 
+   {
       conversion();
    }
 
    // this method calls all the other methods
-   public static void conversion() {
+   public static void conversion() 
+   {
       penniesToDollars();
       System.out.println("*****************************");
       ounceToPound();
@@ -60,17 +43,36 @@ public class ConversionAnisov {
     * Must generate the exact output
     */
 
-   public static void penniesToDollars() {
-      int money = 2042;
+   public static void penniesToDollars() 
+   {
+      // Total starting pennies
       int pennies = 2042;
-      // your code
+
+      // Starting code
       System.out.println(pennies + " pennies is equal to:");
+
+      //Dollar amount
       int dollars = pennies / 100;
       System.out.println(dollars + " dollars");
       pennies = pennies % 100;
+
+      // Quarter amount
       int quarters = pennies / 25;
       System.out.println(quarters + " quarters");
       pennies = pennies % 25;
+
+      // Dime amount
+      int dimes = pennies / 10;
+      System.out.println(dimes + " dimes");
+      pennies = pennies % 10;
+
+      // Nickel amount
+      int nickels = pennies / 5;
+      System.out.println(nickels + " nickels");
+      pennies = pennies % 5;
+
+      // Print whats left
+      System.out.println(pennies + " pennies");
    }
 
    /*
@@ -81,9 +83,17 @@ public class ConversionAnisov {
     * How many pounds and ounces are in 3255 ounces
     */
 
-   public static void ounceToPound() {
-      int ounce = 3255;
-      // your code
+   public static void ounceToPound() 
+   {
+      double ounce = 3255;
+      // Start code
+
+      // Ounce to pound conversion
+      double pounds = ounce / 16.0;
+      ounce = ounce % 16.0;
+
+      // Print both pound and ounce's left over
+      System.out.println("3255 ounces is equal to " + Math.floor(pounds) + " and " + ounce + " ounces");
    }
 
    /*
@@ -91,16 +101,29 @@ public class ConversionAnisov {
     * 1 cup is equals to .24 litter
     */
 
-   public static void cupsToLiter() {
+   public static void cupsToLiter() 
+   {
+      // Starting integer for cups
       int cups = 5;
-      // your code
+
+      // Starting code
+      // Cup to liters conversion
+      double liters = cups / 4.0;
+      System.out.println("5 cups is equal to " + liters + " liters");
+
    }
 
    /* this method converts 10 kilogram to pounds. 1 pound is .45 kilogram */
 
-   public static void poundsToKilo() {
-      double kilogram = 10;
-      // your code
+   public static void poundsToKilo() 
+   {
+      // Starting integer for kilograms
+      double kilogram = 10.0;
+
+      // Starting code
+      // Kilogram to pounds conversion
+      double pounds = kilogram / 0.45;
+      System.out.println("10.0 kilograms is equal to " + pounds + " pounds");
    }
 
    /*
@@ -109,9 +132,16 @@ public class ConversionAnisov {
     * convert 120 kilometer per hour to miles pr hour
     */
 
-   public static void kilometerToMile() {
+   public static void kilometerToMile() 
+   {
+      // Starting integer for kph
       double kph = 120;
-      // your code
+
+      // Starting code
+      // KPH to MPH conversion
+      double mph = kph / 1.609344;
+      System.out.println("120 kph is equal to " + Math.ceil(mph) + " miles per hour");
+
    }
 
 }
