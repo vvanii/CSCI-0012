@@ -6,14 +6,12 @@ self-grade: 100% because I did the best to comment throughout the code and I did
 */
 
 public class ConversionAnisov {
-   public static void main(String[] args) 
-   {
+   public static void main(String[] args) {
       conversion();
    }
 
    // this method calls all the other methods
-   public static void conversion() 
-   {
+   public static void conversion() {
       penniesToDollars();
       System.out.println("*****************************");
       ounceToPound();
@@ -43,15 +41,14 @@ public class ConversionAnisov {
     * Must generate the exact output
     */
 
-   public static void penniesToDollars() 
-   {
+   public static void penniesToDollars() {
       // Total starting pennies
       int pennies = 2042;
 
       // Starting code
       System.out.println(pennies + " pennies is equal to:");
 
-      //Dollar amount
+      // Dollar amount
       int dollars = pennies / 100;
       System.out.println(dollars + " dollars");
       pennies = pennies % 100;
@@ -83,8 +80,7 @@ public class ConversionAnisov {
     * How many pounds and ounces are in 3255 ounces
     */
 
-   public static void ounceToPound() 
-   {
+   public static void ounceToPound() {
       double ounce = 3255;
       // Start code
 
@@ -101,8 +97,7 @@ public class ConversionAnisov {
     * 1 cup is equals to .24 litter
     */
 
-   public static void cupsToLiter() 
-   {
+   public static void cupsToLiter() {
       // Starting integer for cups
       int cups = 5;
 
@@ -115,8 +110,7 @@ public class ConversionAnisov {
 
    /* this method converts 10 kilogram to pounds. 1 pound is .45 kilogram */
 
-   public static void poundsToKilo() 
-   {
+   public static void poundsToKilo() {
       // Starting integer for kilograms
       double kilogram = 10.0;
 
@@ -132,8 +126,7 @@ public class ConversionAnisov {
     * convert 120 kilometer per hour to miles pr hour
     */
 
-   public static void kilometerToMile() 
-   {
+   public static void kilometerToMile() {
       // Starting integer for kph
       double kph = 120;
 
