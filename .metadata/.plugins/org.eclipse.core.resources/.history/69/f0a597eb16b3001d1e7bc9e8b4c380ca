@@ -3,7 +3,7 @@ package gallon_conversion_assignment;
 /*
 Name: Vlad Anisov
 Date: 02/20/2023
-Description: This program shows you gallon to liter conversions starting from 1 gallon to 97 gallons (or every 4 gallons).
+Description: This program shows you gallon to liter conversions starting from 1 gallon to 100 gallons.
 Self-Grade: 100% as I provided detailed comments throughout the entire code, I structured my code with proper spacing and indentation, and I satisfied all the assignment requirements.
 */
 

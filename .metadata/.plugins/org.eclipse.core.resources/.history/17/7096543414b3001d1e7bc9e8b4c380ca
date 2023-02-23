@@ -3,17 +3,14 @@ package gallon_conversion_assignment;
 /*
 Name: Vlad Anisov
 Date: 02/20/2023
-Description: This program shows you gallon to liter conversions starting from 1 gallon to 97 gallons (or every 4 gallons).
-Self-Grade: 100% as I provided detailed comments throughout the entire code, I structured my code with proper spacing and indentation, and I satisfied all the assignment requirements.
+Description: TODO Fill out
+Self-Grade: TODO Fill out
 */
-
-// this is the main class
 public class GallonConversionAnisov
 {
 	//class constants
 	public static final double LITERS = 3.78;
 	
-	// this is the main method
 	public static void main (String[] args)
 	{
 		//calling the 2 methods that make up the code
@@ -21,9 +18,9 @@ public class GallonConversionAnisov
 		galToLitConversion();
    	}
 	
-	////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////
 	
-	/* This method simply displays a description of what this program does. It uses 2 for loops in order to display the top and bottom borders.*/
+	/* Explain what the method #1 does as a comment here*/
 	public static void description()
 	{
 		for(int i = 1; i<=81; i++) {
@@ -41,16 +38,16 @@ public class GallonConversionAnisov
    
 	////////////////////////////////////////////////////////////////////
 	
-	/*This method does the initial gallon to liter conversion. I used a for loop, iterating through the conversion 100 times, with the conversion being i * 3.78, and i incrementing by 4. */
+	/*provide a description of the method #2*/
 	public static void galToLitConversion()
 	{
 		System.out.println("\n" + "              " + "Gallon(s):                  Liter(s):");
-		for (int i = 1; i <= 100; i += 4) {
+		for (int i = 1; i <= 100; i++) {
 			double newLiterValue = (LITERS * i);
-			System.out.println("                 " + i + "                          " + newLiterValue);
+			System.out.println("                 " + i + "                          " + newLiters);
 		};
 	}
    
    
    
-} 
+  	} 

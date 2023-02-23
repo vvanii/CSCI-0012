@@ -3,8 +3,8 @@ package gallon_conversion_assignment;
 /*
 Name: Vlad Anisov
 Date: 02/20/2023
-Description: This program shows you gallon to liter conversions starting from 1 gallon to 97 gallons (or every 4 gallons).
-Self-Grade: 100% as I provided detailed comments throughout the entire code, I structured my code with proper spacing and indentation, and I satisfied all the assignment requirements.
+Description: TODO Fill out
+Self-Grade: TODO Fill out
 */
 
 // this is the main class
@@ -41,11 +41,11 @@ public class GallonConversionAnisov
    
 	////////////////////////////////////////////////////////////////////
 	
-	/*This method does the initial gallon to liter conversion. I used a for loop, iterating through the conversion 100 times, with the conversion being i * 3.78, and i incrementing by 4. */
+	/*This method does the initial gallon to liter conversion. I used a for loop, iterating through the conversion 100 times, with the conversion being i * 3.78. */
 	public static void galToLitConversion()
 	{
 		System.out.println("\n" + "              " + "Gallon(s):                  Liter(s):");
-		for (int i = 1; i <= 100; i += 4) {
+		for (int i = 1; i <= 100; i++) {
 			double newLiterValue = (LITERS * i);
 			System.out.println("                 " + i + "                          " + newLiterValue);
 		};
