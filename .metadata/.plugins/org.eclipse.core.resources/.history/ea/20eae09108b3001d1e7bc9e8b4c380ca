@@ -1,0 +1,40 @@
+package gallon_conversion_assignment;
+
+/*
+Name: Vlad Anisov
+Date: 02/20/2023
+Description: TODO Fill out
+Self-Grade: TODO Fill out
+*/
+public class GallonConversionAnisov
+{
+	//class constants
+	public static final double GALLON = 3.78;
+	
+	public static void main (String[] args)
+	{
+		//calling the 2 methods that make up the code
+		description();
+   	}
+	////////////////////////////////////////////////////////////
+	/* Explain what the method #1 does as a comment here*/
+	public static void description()//<-- rename to a meaningful name
+	{
+		for(int i = 1; i<=2; i++) {
+			System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+			System.out.println("&              This program converts gallons to litters              &");
+		};
+	} 
+   
+   
+   
+	////////////////////////////////////////////////////////////////////
+	/*provide a description of the method #2*/
+	public static void method2()  //  <-- must change the method name to a meaningful name
+	{
+		//Your code for the method #2
+	}
+   
+   
+   
+  } 

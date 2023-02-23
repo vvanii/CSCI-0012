@@ -8,29 +8,46 @@ Self-Grade: TODO Fill out
 */
 public class GallonConversionAnisov
 {
-  //declare the required class constant here 
+	//class constants
+	public static final double LITERS = 3.78;
+	
+	public static void main (String[] args)
+	{
+		//calling the 2 methods that make up the code
+		description();
+		galToLitConversion();
+   	}
+	
+	////////////////////////////////////////////////////////////
+	
+	/* Explain what the method #1 does as a comment here*/
+	public static void description()
+	{
+		for(int i = 1; i<=81; i++) {
+			System.out.print("*");
+		};
+		System.out.println("\n*           This program shows you conversions from gallons to liters           *");
+		System.out.println("*                     1 gallon is equivalent to 3.78 liters                     *");
+		System.out.println("*                            Starting from 1 - 100                              *");
+		System.out.println("*                                                                               *");
+		for(int i = 1; i<=81; i++) {
+			System.out.print("*");
+		};
+		System.out.println(" \n ");
+	} 
+   
+	////////////////////////////////////////////////////////////////////
+	
+	/*provide a description of the method #2*/
+	public static void galToLitConversion()
+	{
+		System.out.println("\n" + "              " + "Gallon(s):                  Liter(s):");
+		for (int i = 1; i <= 100; i++) {
+			double newLiters = (LITERS * i);
+			System.out.println("                 " + i + "                          " + newLiters);
+		};
+	}
    
    
-   public static void main (String[] args)
-   {
-     // your code, call methods #1 and #2
-   }
-   ////////////////////////////////////////////////////////////
-   /* Explain what the method #1 does as a comment here*/
-   public static void method1()//<-- rename to a meaningful name
-   {
-     //your code for the method #1
-   } 
    
-    
-   
-   ////////////////////////////////////////////////////////////////////
-   /*provide a description of the method #2*/
-   public static void method2()  //  <-- must change the method name to a meaningful name
-   {
-     //Your code for the method #2
-   }
-      
-           
-     
-  } 
+  	} 
