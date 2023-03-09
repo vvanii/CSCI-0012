@@ -1,4 +1,4 @@
-package travel_assignment2;
+package travel_assignment;
 
 /*
 Name: Vlad Anisov 
