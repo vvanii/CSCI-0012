@@ -2,8 +2,8 @@
  * 
  */
 /**
- * @author vladanisov
+ * @author vladi
  *
  */
-module travel_assignment {
+module travel_assignment2 {
 }

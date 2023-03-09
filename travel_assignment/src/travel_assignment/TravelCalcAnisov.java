@@ -1,21 +1,22 @@
-package travel_assignment;
+package travel_assignment2;
 
 /*
 Name: Vlad Anisov 
 Date: 3/2/23
-Program Desc: TODO: Fill out
-Self-grade: TODO: Fill out
+Program Desc: This program compares the time and money it will take between a gas car, and an electric car. Simply write tell the program how many times you want to compare (i.e. 1, 2, or 3) and then fill in the requested information. 
+Self-grade: 100%, as I have provided comments throughout the code that I wrote, and the logic of the program is accurate to the output provided. I also believe that I followed proper naming convention and its easy to follow my code with proper indentation. 
 */
 
-//importing java's utils for the scanner
+//importing java's utils for the scanner class
 import java.util.*;
  
 public class TravelCalcAnisov
 {
    public static void main(String[] args)
    {
+	   //This is what loops the program dependent on the users input
       Scanner sc = new Scanner(System.in);
-      description();
+      programDesc();
       System.out.print("\nHow many time do you want to use the app?: ");
       int count = sc.nextInt();
       for(int j = 1; j <= count; j++)
@@ -31,11 +32,11 @@ public class TravelCalcAnisov
       } 
       System.out.println("GOOD BYE");   
    }
-   /*This method calculates the total cost charging the battery, Stops represents the number of the charges*/
    
-   public static double chargeCost(int stops, double pricePerCharge)
+   /*This method calculates the total cost charging the battery, Stops represents the number of the charges*/
+   public static double chargeCost(double distance, int stops, double pricePerCharge)
    {
-      return stops / pricePerCharge;
+      return (distance / stops) * pricePerCharge;
    }
    
    /*This method calculates the total money spend on the gas to travel */
@@ -50,6 +51,7 @@ public class TravelCalcAnisov
    {
       return distance / milePerCharge;
    }
+   
    /*This method calculates the hours of travel taking your gas car*/
    public static double travelHoursGasCar(double distance , double speed)
    {
@@ -64,7 +66,7 @@ public class TravelCalcAnisov
    */
    public static double travelHoursWithElectricCar(int stops, double hoursPerStop, double distance, double speed)
    {
-      return (speed / distance) + stops + hoursPerStop;
+      return distance / speed + (hoursPerStop * stops);
    }
    
    /*This method calculates the cost and the time to travel with a gas car*/
@@ -76,72 +78,87 @@ public class TravelCalcAnisov
       System.out.print("Enter the total number of the miles you are traveling: ");
       //declare a variable and read the user's input
       double distance = sc.nextDouble();
-      //1. prompt the user to enter the speed
+      
+      //prompts the user to enter the speed
       System.out.print("Enter the speed of your car: ");
-      //2. declare a variable and read the user's input
+      //declares a variable and reads the user's input
       double speed = sc.nextDouble();
-      //3. prompt the user to enter the miles per gallon
+      
+      //prompts the user to enter the miles per gallon
       System.out.print("Enter the miles per gallon: ");
-      //4. declare a variable and read the user's input
+      //declares a variable and reads the user's input
       double mpg = sc.nextDouble();
-      //5. prompt the user to enter the cost per gallon
+      
+      //prompts the user to enter the cost per gallon
       System.out.println("Enter the cost per gallon: ");
-      //6. declare a variable and read the user's input
+      //declares a variable and reads the user's input
       double pricePerGallon = sc.nextDouble();
-      //7. call the method travelWithGas and pass the proper parameters  
+      
+      //These methods call the main methods and are assigned to variables which the show the result of the calculations done in the main methods.
+      
+      //calls the method travelWithGas, passing the proper parameters  
       double hours = travelHoursGasCar(distance, speed);
 
-      //8. call the method gasCost and pass the proper parameters
+      //call the method gasCost, passing the proper parameters
       double priceOfGas = gasCost(distance, mpg, pricePerGallon);
       
-      //display the hours of travel and the cost of the travel 
+      
+      //displays the hours of travel and the cost of the travel 
       System.out.println("\nTraveling with your gas car: \n");
       //display  the result you got at step 7
-      System.out.println("It will take you " + hours + " hours for total length of travel.\n");
+      System.out.println("It will take you		" + hours + " hours.\n");
       //display the result you got at step 8
-      System.out.println("The price of gas will be " + priceOfGas + "\n");
+      System.out.println("The price of gas will be		" + priceOfGas + "\n");
    }
    public static void electricTravel(Scanner sc)
    {
    
       System.out.println("\nTraveling with an electric car\n");
       
-      
+      //prompt the user to enter the total number of miles that they are traveling
       System.out.print("Enter the total number of the miles you are traveling: ");
+      //declares distance variable and reads user's input
       double distance = sc.nextDouble();
-      //prompt the user to enter the speed
-      System.out.print("Enter your speed: ");
-      //declare a variable to read the speed
-      double speed = sc.nextDouble();
-      //prompt the user to enter the miles that can be driven with a fully charged battery
-      System.out.print("Enter the number of the miles that you can travel with a fully charged battery: ");
-      //declare a variable and read the input
-      double milesPerCharge = sc.nextDouble();
-      //1.prompt the user to enter the number of the hours it takes to fully charge the car battery
-      System.out.print("Enter the number of hours it takes to FULLY charge your car's battery: ");
-      //2.declare a variable and read the user's input 
-      double timeForFullCharge = sc.nextDouble();
-      //3.prompt the user to enter the cost per battery charge
-      System.out.print("Enter the cost per battery charge: ");
-      //4.declare a variable and read the user's input
-      double costPerCharge = sc.nextDouble();
-      //5.call the method stops with the proper parameters
       
-      //6.call the method travelHourWithElectric with the proper parameters
-                       
-      //7.call the method  chargeCost with the proper parameters 
-       
+      //prompts the user to enter the speed
+      System.out.print("Enter your speed: ");
+      //declares a variable to read the speed
+      double speed = sc.nextDouble();
+      
+      //prompts the user to enter the miles that can be driven with a fully charged battery
+      System.out.print("Enter the number of the miles that you can travel with a fully charged battery: ");
+      //declares a variable and read the input
+      double milesPerCharge = sc.nextDouble();
+      
+      //1.prompts the user to enter the number of the hours it takes to fully charge the car battery
+      System.out.print("Enter the number of hours it takes to FULLY charge your car's battery: ");
+      //2.reads the user's input for time it takes to fully charge the car
+      double timeForFullCharge = sc.nextDouble();
+      
+      //3.prompts the user to enter the cost per battery charge
+      System.out.print("Enter the cost to fully charge your car battery: ");
+      //4.declares a variable and reads the user's input
+      double costPerCharge = sc.nextDouble();
+      
+      //These methods call the main methods and are assigned to variables which the show the result of the calculations done in the main methods.
+      
+      //calls the method stops with the proper parameters
+      double numOfStops = stops(distance, milesPerCharge);
+      //calls the method travelHourWithElectric with the proper parameters
+      double electricTravelHours = travelHoursWithElectricCar((int) numOfStops, timeForFullCharge, distance, speed);                 
+      //calls the method  chargeCost with the proper parameters 
+      double totalChargeCost = chargeCost(distance,(int) milesPerCharge, costPerCharge);
       
       System.out.println("\nTraveling with your electric car\n");
       
-      //display the results that you got in step 6 
-      
-      //display the result from step 7   
-             
+      //displays the hours of travel 
+      System.out.println("It will take you		" + electricTravelHours + " hours.\n");
+      //displays total cost of charge  
+      System.out.println("And the charge will cost you		" + totalChargeCost + "\n");
    }
 
-/* feel free to change the code in this method*/
-   public static void description()
+   //this method is the description you see in the beginning of the program.
+   public static void programDesc()
    {
       for(int i = 1; i <= 80; i++)
          System.out.print("&");
