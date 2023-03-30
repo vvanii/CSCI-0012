@@ -1,7 +1,7 @@
-INDEX VERSION 1.131+C:\Users\vladi\Developer\Personal\School\CSCI-0012\.metadata\.plugins\org.eclipse.jdt.core
-4219165975.index
-1206893740.index
-1795160969.index
-3799026913.index
+INDEX VERSION 1.131+/Users/vladanisov/Developer/Personal/School/CSCI-0012/.metadata/.plugins/org.eclipse.jdt.core
+3096473206.index
+1824360385.index
+1642154004.index
 1865797976.index
-3535009047.index
+232086268.index
+3486277457.index
