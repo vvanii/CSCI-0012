@@ -31,7 +31,16 @@ public class GameAnisov {
 	}
 	
 	public static void interact(Scanner sc) {
-		//TODO
+		System.out.println("Hello, I am a computer playing a \"Guess The Number\" game with you. What would you like to call me?\n");
+		String compName = sc.nextLine();
+		System.out.println("--------------------------------------------------------------------");
+		
+		System.out.println("Wow! I really like the name " + compName + "!\nWhat is your name?\n");
+		String playerName = sc.nextLine();
+		
+		System.out.println("Hey " + playerName + ", I'm excited to play the guessing game with you!\nI will think of a number between a low and a high value that you will enter, which I will allow you to guess until you get it.");
+		System.out.println("For each guess, I will give you a hint whether the right answer is higher or lower than your guess.");
+		System.out.println("--------------------------------------------------------------------");
 	}
 	
 	public static String match (int guess, int randNum) {
@@ -44,7 +53,9 @@ public class GameAnisov {
 	}
 	
 	public static void report (int numGames, int totalGuesses) {
-		//TODO
+		System.out.println("Overall Results");
+		System.out.println("\tTotal Games: " + numGames);
+		System.out.println("\tTotal Number of Guesses: " + totalGuesses);
 	}
 	
 	public static int funGame (Scanner console, int min, int max) {
@@ -58,18 +69,18 @@ public class GameAnisov {
 		console.next();
 		
 		System.out.println("I am thinking of a number between " + min + " and " + max + "...");
-		pressEnterToContinue();
+		console.nextLine();
 		
 		
 		
 		while(userGuess != compNum) {
 			numOfGuesses++;
-			System.out.println("Guess: ");
+			System.out.println("Enter your guess: ");
 			userGuess = console.nextInt();
 			
 			String result = match(userGuess, compNum);
 			
-			if (result == "match") {
+			if (result == "Match") {
 				System.out.println("******* Congratulations! *******");
 				System.out.println("You guessed my number in: " + numOfGuesses);
 			} else {
@@ -80,20 +91,6 @@ public class GameAnisov {
 		return numOfGuesses;
 	}
 	
-	private static void pressEnterToContinue()
-	 { 
-		try (Scanner enter = new Scanner(System.in)) {
-			System.out.println("Press the Enter key to start...");
-	        try
-	        {
-	            System.in.read();
-	            enter.nextLine();
-	        }  
-	        catch(Exception e)
-	        {}
-		}  
-	 }
-	
 	public static void action (Scanner console) {
 		int numOfGames = 0;
 		int totalGuesses = 0;
@@ -102,8 +99,33 @@ public class GameAnisov {
 		String repeat = "yes";
 		
 		while (repeat.equalsIgnoreCase("yes")) {
-			
+		String s = "Enter a low value: ";
+		String s1 = "Enter a high value: ";
+		
+		//initializing min and max values according to user input
+		min = prompt(console, s);
+		max = prompt(console, s1);
+		
+		//validating min and max values to ensure proper dynamics of the program.
+		while (max < min) {
+			System.out.println("You entered an invalid value for max. Max must be greater than min. Lets start all over again\n");
+			min = prompt(console, s);
+			max = prompt(console, s1);
 		}
+		
+		int guesses = funGame(console, min, max);
+		
+		totalGuesses = guesses + totalGuesses;
+		
+		numOfGames++;
+		
+		System.out.println("Play again? Type \"yes\", otherwise you can type \"no\"\n");
+		
+		repeat = console.nextLine();
+		
+		}
+		report(numOfGames, totalGuesses);
+		
 	}
 
 }
