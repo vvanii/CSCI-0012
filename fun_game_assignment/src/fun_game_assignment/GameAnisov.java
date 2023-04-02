@@ -1,19 +1,22 @@
 package fun_game_assignment;
+//used for importing scanner and random class
 import java.util.*;
 
 //Name: Vlad Anisov
 //Date:03/30/23
-//Desc: TODO
-//Self-Grade: TODO
+//Desc: this is a "Guess the number" game, where the user defines two limits, a min and a max, and the computer will randomly pick a number. It is then up to the user to guess what the number is.
+//Self-Grade: %100, as my code compiles and runs and works perfectly. It also matches the output of the assignment. I also provided comments all throughout
 
 public class GameAnisov {
 
+	//this is the main method which runs the two primary methods, interact() and action() in order for the program to work.
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		interact(sc);
 		action(sc);
 	}
 	
+	// this method simply is in charge of the user input for the min and max values. It validates the given integer to make sure its a valid input and then returns it.
 	public static int prompt (Scanner sc, String s) {
 		
 		int userInput = 0;
@@ -32,6 +35,7 @@ public class GameAnisov {
 		return userInput;
 	}
 
+	//this method is an introduction to the application and how it works. 
 	public static void interact(Scanner sc) {
 		System.out.println("Hello, I am a computer playing a \"Guess The Number\" game with you. What would you like to call me?");
 		String compName = sc.nextLine();
@@ -54,6 +58,7 @@ public class GameAnisov {
 			return "Match";
 	}
 	
+	//this method reports overall stats of the number of games played, and total number of guesses by the user
 	public static void report (int numGames, int totalGuesses) {
 		System.out.println("Overall Results");
 		System.out.println("\tTotal Games: " + numGames);
@@ -62,15 +67,19 @@ public class GameAnisov {
 		System.out.println("Thank you for playing!");
 	}
 	
+	//this method holds all the logic for the actual setting of min and max values, as well as the generation of the random numbers within the min and max values.
 	public static int funGame (Scanner console, int min, int max) {
-		Random random = new Random();
 		
+		//this is what generates a random number within the min and max values. 
+		Random random = new Random();
 		int compNum = random.nextInt(min, max);
 		
 		int userGuess = 0;
 		int numOfGuesses = 0;
 		
 		System.out.println("I am thinking of a number between " + min + " and " + max + "...");
+		
+		//"press enter to continue" function
 		System.out.println("Press Enter key to continue...");
 		try
 		{
@@ -79,6 +88,7 @@ public class GameAnisov {
 		catch(Exception e)
 		{}
 
+		// while the user guess is not equal to the computers number, it will run the program
 		while(userGuess != compNum) {
 			numOfGuesses++;
 			System.out.println("Enter your guess: ");
@@ -97,6 +107,7 @@ public class GameAnisov {
 		return numOfGuesses;
 	}
 	
+	//this is the primary method which runs all of the other methods in order to completely compile and run this code successfully
 	public static void action (Scanner console) {
 		int numOfGames = 0;
 		int totalGuesses = 0;
@@ -111,7 +122,6 @@ public class GameAnisov {
 			String s1 = "Enter a maximum value: ";
 		
 			//initializing min and max values according to user input
-			
 			min = prompt(console, s);
 			max = prompt(console, s1);
 			
