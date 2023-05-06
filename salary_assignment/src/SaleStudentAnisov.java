@@ -8,19 +8,23 @@ public class SaleStudentAnisov {
 
         // This is where the sales reps are created and their information is displayed
 
-        // Fist sales rep -> Jose
-        SaleRep rep1 = new SaleRep(1000, 6, "Jose Rodriguez");
-        rep1.addSale(4545);
+        // Fist sales rep -> John
+        SaleRep rep1 = new SaleRep(120000, 10, "John Doe");
+        rep1.addSale(3587);
+        rep1.returnItem(23);
+        rep1.addSale(7680);
         System.out.println(rep1.toString());
-        rep1.getRaise(5);
+        rep1.getRaise(2);
         System.out.println(rep1.toString());
         System.out.println("---------------------------------------------------------------------------");
 
-        // Second sales rep -> Maria
-        SaleRep rep2 = new SaleRep(1800, 12, "Maria Chavez");
-        rep2.addSale(7680);
+        // Second sales rep -> Sheila
+        SaleRep rep2 = new SaleRep(90000, 7, "Sheila Smith");
+        rep2.addSale(23782);
+        rep2.returnItem(123);
+        rep2.addSale(3800);
         System.out.println(rep2.toString());
-        rep2.getRaise(8);
+        rep2.getRaise(3);
         System.out.println(rep2.toString());
         System.out.println("---------------------------------------------------------------------------");
     }
